@@ -230,7 +230,7 @@ def parallel_segmentation(
     logger.info(f"Tiempo transferencia CPU → GPU: {end_gpu - start_gpu:.4f} segundos")
 
     start_kernel = time.time()
-    block_size = 512  # Maybe it's the best number, 1024 for better gpus
+    block_size = 1024  # Maybe it's the best number, 1024 for better gpus
     grid_size = (nfibers_subject + block_size - 1) // block_size
 
     func(
@@ -364,7 +364,7 @@ def get_bundlesdata_files(path):
 if __name__ == "__main__":
     n_points = 21
     ndata_fiber = n_points * 3
-    n_runs_per_file = 10
+    n_runs_per_file = 3
 
     bundles_files = get_bundlesdata_files("files/sujetos")
 

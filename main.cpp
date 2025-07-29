@@ -459,7 +459,7 @@ vector<string> getBundlesdataFiles(string path) {
 int main() {
   unsigned short int n_points = 21;
   unsigned short int ndata_fiber = n_points * 3;
-  unsigned short int n_runs_per_file = 10;
+  unsigned short int n_runs_per_file = 3;
 
   vector<string> bundles_files = getBundlesdataFiles("files/sujetos");
 
