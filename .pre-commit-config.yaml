@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.5
+    hooks:
+      - id: ruff
+        types_or: [python, pyi]
+        args: [--fix, --line-length, "200", --select, I]
+        exclude: ^(files|outputs)/
+
+      - id: ruff-format
+        types_or: [python, pyi]
+        exclude: ^(files|outputs)/
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: end-of-file-fixer
+        exclude: ^(files|outputs)/
+
+      - id: mixed-line-ending
+        args: [--fix=lf]
+        exclude: ^(files|outputs)/
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.10.1
+    hooks:
+      - id: isort
+        name: "isort (Import Order)"
+        args: ["--profile", "black", "--line-length", "200"]
+        types: [python]
+        exclude: ^(files|outputs)/

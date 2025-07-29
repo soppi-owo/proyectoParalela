@@ -1,0 +1,33 @@
+# IDE-specific files
+.idea/
+.vscode/
+*.iml
+
+# Python virtual environments
+.venv/
+env/
+venv/
+
+# Compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and temporary files
+tests/__pycache__/
+*.out
+*.log
+
+# Build outputs and results
+outputs/
+segmentacion_indices/
+segmentacion_resultados/
+files/
+*.bundlesdata
+
+# UV specific files
+.uv/
+
+# System files
+.DS_Store
+Thumbs.db

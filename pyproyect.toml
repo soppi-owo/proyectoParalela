@@ -1,0 +1,17 @@
+[project]
+name = "fiber-clustering"
+version = "0.1.0"
+dependencies = [
+    "numpy==2.3.2",
+    "flake8",
+    "black",
+    "pycuda==2025.1.1",
+    "pre-commit",
+]
+
+[build-system]
+requires = ["uv"]
+build-backend = "uv.build_api"
+
+[flake8]
+max-line-length = 160
